@@ -179,5 +179,3 @@ SIMPLE_JWT = {
 SIMPLE_JWT = {
   "TOKEN_OBTAIN_SERIALIZER": "authers.serializers.Myrefreshtoken",
 }
-
-CORS_ALLOW_ALL_ORIGINS = True
