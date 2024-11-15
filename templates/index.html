@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JWT Auth App</title>
+    <style>
+        /* Dark Theme */
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: #ffcc00;
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        button {
+            background-color: #333;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+
+        button a:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My JWT Auth App</h1>
+    <button><a href="{% url 'profile' %}">Profile Endpoint</a></button><br>
+    <button><a href="{% url 'register' %}">Register Endpoint</a></button><br>
+    <button><a href="{% url 'login' %}">Login Endpoint</a></button><br>
+</body>
+</html>
