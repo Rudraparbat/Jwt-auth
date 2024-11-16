@@ -33,6 +33,7 @@
         python manage.py runserver
 ## Installation errors :
   #### 1. When you are starting the Docker container, you might encounter an error: Error response from daemon: Conflict. The container name "my-container-name" is already in use by container "659aac92f48f6498cbcba5614f67c77b8a4b8c60694622e094ae87f2e2d086ac". You have to remove (or rename) that container to be able to reuse that name. If you see this, go to the docker-compose.yml file, change the container name, and then run the docker-compose up --build command in your terminal. This should fix the issue.
+  
 #### 2. When installing requirements.txt without Docker, you might encounter an error while downloading the psycopg2-binary library, stating that you need pg_config. This is not an issue within the project itself; rather, you need to set up pg_config by installing PostgreSQL. To avoid this conflict, navigate to the Dauth folder, then open the settings.py file. Scroll down to the database configuration part and comment out the PostgreSQL configuration. This should help you avoid the issue.       
 ## Usage : 
   Access The Application :
@@ -47,7 +48,7 @@
   ##### in these page you can see three endpoints button 1. profile endpoine , 2. register endppoint ,  3. login endpoint. After clicking these endoints you are going to the next section
   Register endpoint :
       ![register](https://github.com/user-attachments/assets/84d6b16b-6c32-4ecb-a05a-d9fb7879f1bb)
-  ##### There as a user you are gonna register your self to do this .copy which i give below
+  ##### As a user, you're going to register yourself. To do this, copy the instructions I give below
         {
         "username" : "your_user_name" ,
         "password" : "Endra@1000",
@@ -55,7 +56,18 @@
         "phone_numbers" : 999999999,
         "date_of_birth" : 22-12-2000
         }
-  ##### Copy this and change credentials as you like but username and password must be written you can ignore others.
+  ##### Copy this and change the credentials as you like, but ensure the username and password are included. You can ignore the other fields if you wish.
+  ##### As a response you will get the credentials with sucess message with your ip address.
+  Login endpoint :
+      ![Login](https://github.com/user-attachments/assets/d76373c4-f517-4f4e-8335-75e23f0ab203)
+  ##### In this endpoint you have to login with your registered credentials.copy which i give below .
+  {
+      "username" : "your_user_name" ,
+      "password" : "Endra@1000"
+    }
+   ##### Copy this and change the credentials which you registered as username and password, but ensure the username and password are registered.
+  
+
   
 
 
