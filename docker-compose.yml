@@ -1,4 +1,3 @@
-version : "3.13"
 services:
   app:
     build: .
@@ -20,3 +19,16 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     container_name: postgre_db
+  # test: 
+  #   build: .
+  #   command: pytest
+  #   volumes: 
+  #     - .:/j-awth
+  #   environment:
+  #     - DB_HOST=db  # DB settings for the test service
+  #     - DB_USER=postgres
+  #     - DB_PASSWORD=postgres
+  #     - DB_NAME=postgres
+  #   depends_on:
+  #     - app
+  #   entrypoint: ["sh", "-c", "sleep 10 && pytest"]
