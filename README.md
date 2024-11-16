@@ -50,26 +50,30 @@
       ![register](https://github.com/user-attachments/assets/84d6b16b-6c32-4ecb-a05a-d9fb7879f1bb)
   ##### As a user, you're going to register yourself. To do this, copy the instructions I give below
         {
-        "username" : "your_user_name" ,
-        "password" : "Endra@1000",
-        "email" : "youremail@gmail.com" ,
-        "phone_numbers" : 999999999,
-        "date_of_birth" : 22-12-2000
+    "username": "your_user_name",
+    "password": "user@200",
+    "date_of_birth": "21-12-2003",
+    "phone_numbers": 9789343431,
+    "email": "justin@gmail.com"
         }
-  ##### Copy this and change the credentials as you like, but ensure the username and password are included. You can ignore the other fields if you wish.
+  ##### Copy this and change the credentials as you like, but ensure the username and password are included. You can ignore the other fields if you wish.and dont change any structure or you will get json parse error
   ##### As a response you will get the credentials with sucess message with your ip address.
   Login endpoint :
       ![Login](https://github.com/user-attachments/assets/d76373c4-f517-4f4e-8335-75e23f0ab203)
   ##### In this endpoint you have to login with your registered credentials.copy which i give below 
   
       {
-      "username" : "your_user_name" ,
-      "password" : "Endra@1000"
-      }
+    "username": "your_user_name",
+    "password": "user@200",
+    }
    ##### Copy this and change the credentials which you registered as username and password, but ensure the username and password are registered.
    ##### As a response, you'll receive a greeting message along with a JWT access and refresh token. Don't be surprised; this is just to show you the tokens. Otherwise, they are securely saved into the server session.
    Profile endpoint :
-       
+       ![profile](https://github.com/user-attachments/assets/55fa20b7-7e4c-4611-924a-b0c50d67f186)
+
+##### after login you can see your credentials remeber you have to login otherwise it shows a message to login as a user to see the profile
+
+
   
 
   
