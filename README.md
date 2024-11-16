@@ -11,10 +11,11 @@
       -Docker-compose.
       -Git.
   ### Steps :
-          -git clone https://github.com/Rudraparbat/Jwt-auth.git
-          -cd Jwt-auth  
-  To start the container :
-          -docker-compose up --build
+  #### 1. Clone the Repo :
+          git clone https://github.com/Rudraparbat/Jwt-auth.git
+          cd Jwt-auth  
+  #### 2. Start the container : 
+          docker-compose up --build
 ### Usage : 
   Access The Application :
       Once the Docker containers are up and running, you can access the Django application at-
