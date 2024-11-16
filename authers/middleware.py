@@ -1,5 +1,5 @@
 from django.utils.deprecation import MiddlewareMixin
-# my customized middleware
+# my customized middleware for getting ip address
 class ipMidleware(MiddlewareMixin) :
     def process_request(self , request) :
         get_ip_address = request.META.get('HTTP_X_FORWARDED_FOR')

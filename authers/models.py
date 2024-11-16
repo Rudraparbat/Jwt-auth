@@ -3,11 +3,13 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser , Group , Permission
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
+# This is a validator for checking the entered number is from india or not
 indian_phone_number_validator = RegexValidator(
     regex=r'^[6-9]\d{9}$',
     message="Enter a valid 10-digit Indian phone Number.",
     code='invalid_phone_number'
 )
+# This is my extended abstract user class
 class Authuser(AbstractUser) :
     phone_numbers  = models.CharField(max_length=10 ,
      null=True , 

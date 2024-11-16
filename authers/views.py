@@ -9,6 +9,7 @@ from django.contrib.auth import authenticate
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.views.generic import TemplateView
 import jwt
+# This class for creating the user profile and save into db
 class CreateUserProfile(APIView) :
     def post(self, request):
         data = request.data.copy()
@@ -19,6 +20,7 @@ class CreateUserProfile(APIView) :
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+# This class for getting user profile (after login else it will show a not found message)
 class Getuser(APIView) :
     def get(self, request) :
         try :
@@ -39,6 +41,7 @@ class Getuser(APIView) :
                 "email" : user['email'],
                 "login_ip" : user['last_login_ip'],
             } , status= status.HTTP_200_OK)
+# This class for user to login and create jwt authentication tokens and save it to the server session securely 
 class Loginuser(APIView) :
     def post(self , request) :
         user = request.data
@@ -51,6 +54,7 @@ class Loginuser(APIView) :
             request.session['refresh_token'] = str(refresh)
             return Response({"message" : f"hello {user['username']}" , "refresh" : str(refresh) , "access_token" : str(refresh.access_token)} ,status=status.HTTP_200_OK)
         return Response({"message"  : f"{user['username']} doesnt exist"} , status=status.HTTP_404_NOT_FOUND)
+#  This is for logging out a logged in user which flush the tokens from the session
 class Logoutuser(APIView) :
     def get(self , request) :
         request.session.flush() 
