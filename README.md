@@ -73,8 +73,12 @@
 
 ##### after login you can see your credentials remeber you have to login otherwise it shows a message to login as a user to see the profile
 
-
-  
+## If Youre using Postman or anyother api tester then :
+#### Endpoints :
+      Register_endpoint : http://localhost:8000/api/register/ (GET request)
+      Login_endpoint : http://localhost:8000/api/login/  (POST request)
+      Profile_endpoint : http://localhost:8000/api/profile/  (POST request)
+      Logout_endpoint : http://localhost:8000/api/logout/     (GET request)
 
   
 
