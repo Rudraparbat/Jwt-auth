@@ -11,8 +11,7 @@
       -Docker-compose.
       -Git.
   ### Steps :
-      1. **Clone the Repository**:
-            ```bash 
+      ### Clone the repositry: 
             git clone https://github.com/Rudraparbat/Jwt-auth.git
             cd Jwt-auth
             
