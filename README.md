@@ -73,13 +73,26 @@
 
 ##### after login you can see your credentials remeber you have to login otherwise it shows a message to login as a user to see the profile
 
+#### After login if you want to logout, in that url paste http://localhost:8000/api/logout/ hit that and you'll logout automatically
+
 ## If Youre using Postman or anyother api tester then :
 #### Endpoints :
       Register_endpoint : http://localhost:8000/api/register/ (GET request)
       Login_endpoint : http://localhost:8000/api/login/  (POST request)
       Profile_endpoint : http://localhost:8000/api/profile/  (POST request)
       Logout_endpoint : http://localhost:8000/api/logout/     (GET request)
+## Running Tests :
+#### To test api endpoints i have written 4 test cases but but there is a cache that whenever i try to test it showing me connection error with container even i specify everything in my docker-compose.yml file . So test the test cases just press ctrl+c to stop the container . then 
+##### 1st . After stopiing the container install env , activate it and install all reqirements and start server locally for these steps follow installation process without docker
+##### 2nd . hit a command
+        python -m pytest
+##### And tests are running
+ ## Note :
+   If you guys can help me it would be great for running testcases thank you
 
+
+
+  
   
 
 
