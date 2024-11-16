@@ -90,7 +90,14 @@
  ## Note :
    If you guys can help me it would be great for running testcases thank you
 
+## Technology used :
+###### Django: Core web framework for the backend.
 
+##### PostgreSQL: Database system for storing user data.
+
+##### JWT: JSON Web Tokens for secure and stateless authentication.
+
+##### Docker: Containerization platform to ensure consistent environments.
 
   
   
