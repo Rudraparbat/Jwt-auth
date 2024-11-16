@@ -42,6 +42,23 @@
   Home page :
       ![homepage](https://github.com/user-attachments/assets/7f4b02d8-da9d-4c6a-ba2c-8ad50de0d0b6)
   ##### It is the Home page click the "go to the main page button" for next section
+  Main page :
+      ![mainpage](https://github.com/user-attachments/assets/9dfd30c0-1797-444c-9ee4-de9a95fe731f)
+  ##### in these page you can see three endpoints button 1. profile endpoine , 2. register endppoint ,  3. login endpoint. After clicking these endoints you are going to the next section
+  Register endpoint :
+      ![register](https://github.com/user-attachments/assets/84d6b16b-6c32-4ecb-a05a-d9fb7879f1bb)
+  ##### There as a user you are gonna register your self to do this .copy which i give below
+        {
+        "username" : "your_user_name" ,
+        "password" : "Endra@1000",
+        "email" : "youremail@gmail.com" ,
+        "phone_numbers" : 999999999,
+        "date_of_birth" : 22-12-2000
+        }
+  ##### Copy this and change credentials as you like but username and password must be written you can ignore others.
+  
+
+
 
 
        
