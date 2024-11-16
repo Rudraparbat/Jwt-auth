@@ -11,11 +11,9 @@
       -Docker-compose.
       -Git.
   ### Steps :
-  1. Clone the repositry:
           -git clone https://github.com/Rudraparbat/Jwt-auth.git
-          -cd Jwt-auth
-     
-  2 . To start the container :
+          -cd Jwt-auth  
+  To start the container :
           -docker-compose up --build
 ### Usage : 
   Access The Application :
