@@ -38,6 +38,10 @@
   Access The Application :
       Once the Docker containers are up and running, you can access the Django application at-
       http://localhost:8000
-## After Starting it :
+## After Starting The project :
+  Home page :
+      ![homepage](https://github.com/user-attachments/assets/7f4b02d8-da9d-4c6a-ba2c-8ad50de0d0b6)
+  ##### It is the Home page click the "go to the main page button" for next section
+
 
        
