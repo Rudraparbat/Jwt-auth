@@ -24,7 +24,7 @@
   #### . Activate env :
           cd env
           cd scripts
-          cd activate
+          activate
           cd ..
           cd..
   #### .Install requirements :
