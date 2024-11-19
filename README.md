@@ -64,7 +64,7 @@
   
       {
     "username": "your_user_name",
-    "password": "user@200",
+    "password": "user@200"
     }
    ##### Copy this and change the credentials which you registered as username and password, but ensure the username and password are registered.
    ##### As a response, you'll receive a greeting message along with a JWT access and refresh token. Don't be surprised; this is just to show you the tokens. Otherwise, they are securely saved into the server session.
