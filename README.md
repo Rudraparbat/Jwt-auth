@@ -17,6 +17,8 @@
           cd Jwt-auth  
   #### 2. Start the container : 
           docker-compose up --build
+  #### 3. Open another Terminal(Make sure the container is up) :
+          docker-compose exec app /bin/bas
   ### In case you dont use docker then (Note that if you dont use docker then) :
         Follow the first cloning step and second step then
   #### . Create a virtual env :
