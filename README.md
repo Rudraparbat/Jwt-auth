@@ -17,7 +17,7 @@
           cd Jwt-auth  
   #### 2. Start the container : 
           docker-compose up --build
-  #### 3. Open another Terminal(Make sure the container is up) :
+  #### 3. Open another Terminal to go to the containers shell (Make sure the container is up) :
           docker-compose exec app /bin/bash
   #### 4 . Make Migrations on db : 
             python manage.py makemigrations
