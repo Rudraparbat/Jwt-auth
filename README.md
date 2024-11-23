@@ -34,6 +34,9 @@
           cd..
   #### .Install requirements :
         pip install requirements.txt
+  #### . Make migrations :
+        python manage.py makemigrations
+        python manage.py migrate
   #### . Start the server :
         python manage.py runserver
 ## Installation errors :
