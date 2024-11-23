@@ -1,4 +1,5 @@
-from django.shortcuts import render , redirect ,HttpResponse
+from django.shortcuts import render , redirect ,HttpResponse 
+from django.http import JsonResponse
 from .models import *
 from django.http import Http404
 from rest_framework.views import APIView
@@ -24,7 +25,7 @@ class CreateUserProfile(APIView) :
 class Getuser(APIView) :
     def get(self, request) :
         try :
-            access_token = request.session['access_token']
+            access_token = request.COOKIES.get('access_token')
         except :
             access_token = None
         if access_token == None :
@@ -41,6 +42,7 @@ class Getuser(APIView) :
                 "email" : user['email'],
                 "login_ip" : user['last_login_ip'],
             } , status= status.HTTP_200_OK)
+            
 # This class for user to login and create jwt authentication tokens and save it to the server session securely 
 class Loginuser(APIView) :
     def post(self , request) :
@@ -50,15 +52,31 @@ class Loginuser(APIView) :
         authuser = Authuser.objects.filter(username = username).first()
         if authuser and authuser.check_password(password):
             refresh = Myrefreshtoken.for_user(authuser)
-            request.session['access_token'] = str(refresh.access_token)
-            request.session['refresh_token'] = str(refresh)
-            return Response({"message" : f"hello {user['username']}" , "refresh" : str(refresh) , "access_token" : str(refresh.access_token)} ,status=status.HTTP_200_OK)
+            access_token  = str(refresh.access_token)
+            refresh_token = str(refresh)
+            response = Response(
+                {
+                "message": f"Hello {user['username']}, login successful!",
+                "access_token": access_token,
+                "refresh_token": refresh_token,
+                }
+            )
+            response.set_cookie(
+                'access_token', value=access_token, httponly=True, secure=True, samesite='Strict'
+            )
+            response.set_cookie(
+                'refresh_token', value=refresh_token, httponly=True, secure=True, samesite='Strict'
+            )
+            return response
         return Response({"message"  : f"{user['username']} doesnt exist"} , status=status.HTTP_404_NOT_FOUND)
 #  This is for logging out a logged in user which flush the tokens from the session
-class Logoutuser(APIView) :
-    def get(self , request) :
-        request.session.flush() 
-        return redirect('main')
+class Logoutuser(APIView):
+    def get(self, request):
+        response = JsonResponse({"message": "Logged out successfully"})
+        response.delete_cookie('access_token')
+        response.delete_cookie('refresh_token')
+        request.session.flush()
+        return response
 class MainView(TemplateView):
     template_name = 'index.html'
 class HomePageView(TemplateView):
