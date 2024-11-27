@@ -51,6 +51,8 @@ class Loginuser(APIView) :
         password = user.get('password')
         authuser = Authuser.objects.filter(username = username).first()
         if authuser and authuser.check_password(password):
+            authuser.last_login_ip = request.ip_address
+            authuser.save() 
             refresh = Myrefreshtoken.for_user(authuser)
             access_token  = str(refresh.access_token)
             refresh_token = str(refresh)
